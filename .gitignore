@@ -62,3 +62,7 @@ typings/
 
 # DS Store
 .DS_Store
+
+#Visual Studio
+.vs
+.suo
