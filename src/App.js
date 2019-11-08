@@ -9,7 +9,15 @@ function App() {
       </header>
       <main className="main">
         <section className="top-section-container">
-          <h1 className="main-title">Don't call it a Side Proj!</h1>
+          <div className="title-text-container">
+            <p className="title-text">We're Here</p>
+            <p className="title-text">To Make</p>
+            <p className="title-text">A Statement</p>
+          </div>
+          <p className="main-side-title">Don't <br /> call <br /> it a <br /> Side <br /> Proj!</p>
+        </section>
+
+        <section className="part-2">
         </section>
       </main>
     </div>

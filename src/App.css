@@ -1,3 +1,71 @@
 .App {
   text-align: center;
 }
+
+header {
+width: 100%;
+height: 30px;
+background-color: #fff;
+color: var(--blue);
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+.top-section-container {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  background-color: var(--blue);
+  background-image: url(https://www.transparenttextures.com/patterns/black-linen.png),linear-gradient(#fff, var(--blue) 15% 70%, #000);
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.main-side-title {
+  position: absolute;
+  padding: 25px 25px 0 0;
+  top: 0;
+  right: 0;
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: right;
+  mix-blend-mode: overlay;
+  color: #fff4;
+}
+
+.title-text-container {
+  width: 600px;
+  padding-top: 25px;
+}
+
+.title-text {
+  background-color: var(--pink);
+  padding: 5px 50px 5px 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: right;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 45px) 100%, 0 100%);
+}
+
+.title-text:nth-of-type(1) {
+  width: 400px;
+  letter-spacing: 3px;
+}
+
+.title-text:nth-of-type(2) {
+  width: 322px;
+}
+
+.title-text:nth-of-type(3) {
+  width: 400px;
+}
+
+.part-2 {
+  width: 100%;
+  height: 600px;
+  background-color: #fff;
+}
