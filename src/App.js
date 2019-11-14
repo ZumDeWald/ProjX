@@ -13,8 +13,8 @@ function App() {
         <section className="top-section-container">
           <div className="title-text-container">
             <p className="title-text">We're Here</p>
-            <p className="title-text">To Make</p>
-            <p className="title-text">A Statement</p>
+            <p className="title-text">To Make A</p>
+            <p className="title-text">Statement</p>
           </div>
           <p className="main-side-title">Don't <br /> call <br /> it a <br /> Side <br /> Proj!</p>
         </section>
