@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
 
             <div className="item-box">
               <div className="icon-container">
-                <i className="fas fa-gift icon"></i>
+                <FontAwesomeIcon icon="gift" className="icon" fixedWidth />
               </div>
               <div className="item-box-desc">
               <p>This is the first item box in this row.</p>
@@ -31,7 +33,7 @@ function App() {
 
             <div className="item-box">
               <div className="icon-container">
-                <i className="fab fa-fort-awesome icon"></i>
+                <FontAwesomeIcon icon={['fab', 'fort-awesome']} className="icon" fixedWidth />
               </div>
               <div className="item-box-desc">
               <p>This is the second item box in this row.</p>
@@ -40,7 +42,7 @@ function App() {
 
             <div className="item-box">
               <div className="icon-container">
-                <i className="fas fa-crow icon"></i>
+                <FontAwesomeIcon icon="crow" className="icon" fixedWidth />
               </div>
               <div className="item-box-desc">
               <p>This is the third item box in this row.</p>
