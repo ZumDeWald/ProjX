@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+
+import Accordian1 from './Accordian1.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -48,51 +50,10 @@ function App() {
               <p>This is the third item box in this row.</p>
               </div>
             </div>
-
-          </div>
-        </section>
-        <section>
-          {/* begin::Accordion */}
-          <div class="accordion accordion-outline" id="accordionExample6">
-            <div class="card">
-              <div class="card-header" id="headingOne6">
-                <div class="card-title" data-toggle="collapse" data-target="#collapseOne6" aria-expanded="true" aria-controls="collapseOne6">
-                  <i class="flaticon-folder-1"></i> Collapsible Group Item #1
-                </div>
-              </div>
-              <div id="collapseOne6" class="card-body-wrapper collapse show" aria-labelledby="headingOne6" data-parent="#accordionExample6">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo6">
-                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo6" aria-expanded="false" aria-controls="collapseTwo6">
-                  <i class="flaticon-home-1"></i> Collapsible Group Item #2
-                </div>
-              </div>
-              <div id="collapseTwo6" class="card-body-wrapper collapse" aria-labelledby="headingTwo5" data-parent="#accordionExample6">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree6">
-                <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree6" aria-expanded="false" aria-controls="collapseThree6">
-                  <i class="flaticon-multimedia-5"></i> Collapsible Group Item #3
-                </div>
-              </div>
-              <div id="collapseThree6" class="card-body-wrapper collapse" aria-labelledby="headingThree6" data-parent="#accordionExample6">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* end::Accordion */}
+          <Accordian1 />
+
         </section>
       </main>
     </div>

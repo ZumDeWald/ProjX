@@ -124,3 +124,7 @@ main {
   margin-top: 25px;
   border-top: 2px solid var(--blue);
 }
+
+.accordion1 {
+  margin-bottom: 100px;
+}
