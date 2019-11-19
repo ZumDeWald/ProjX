@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
 
+import Accordian1 from './Accordian1.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 function App() {
   return (
     <div className="App">
@@ -11,8 +15,8 @@ function App() {
         <section className="top-section-container">
           <div className="title-text-container">
             <p className="title-text">We're Here</p>
-            <p className="title-text">To Make</p>
-            <p className="title-text">A Statement</p>
+            <p className="title-text">To Make A</p>
+            <p className="title-text">Statement</p>
           </div>
           <p className="main-side-title">Don't <br /> call <br /> it a <br /> Side <br /> Proj!</p>
         </section>
@@ -22,7 +26,7 @@ function App() {
 
             <div className="item-box">
               <div className="icon-container">
-                <i className="fas fa-gift icon"></i>
+                <FontAwesomeIcon icon="gift" className="icon" fixedWidth />
               </div>
               <div className="item-box-desc">
               <p>This is the first item box in this row.</p>
@@ -31,7 +35,7 @@ function App() {
 
             <div className="item-box">
               <div className="icon-container">
-                <i className="fab fa-fort-awesome icon"></i>
+                <FontAwesomeIcon icon={['fab', 'fort-awesome']} className="icon" fixedWidth />
               </div>
               <div className="item-box-desc">
               <p>This is the second item box in this row.</p>
@@ -40,14 +44,16 @@ function App() {
 
             <div className="item-box">
               <div className="icon-container">
-                <i className="fas fa-crow icon"></i>
+                <FontAwesomeIcon icon="crow" className="icon" fixedWidth />
               </div>
               <div className="item-box-desc">
               <p>This is the third item box in this row.</p>
               </div>
             </div>
-
           </div>
+
+          <Accordian1 />
+
         </section>
       </main>
     </div>
