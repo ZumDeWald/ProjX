@@ -3,7 +3,7 @@ import ExampleChart from './ExampleChart.js';
 import ExampleChart2 from './ExampleChart2.js';
 
 import './App.css';
-import logo from './jmmLogo.png';
+import logo from './projX.png';
 import user from './user.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -38,8 +38,12 @@ function App() {
         <section className="main-submenu">
         </section>
         <section className="main-center">
-          <ExampleChart/>
-          <ExampleChart2/>
+          <ExampleChart chartId="1" options={{
+              dataSet: [12, 10, 9, 8, 2]
+            }}/>
+          <ExampleChart chartId="2" options={{
+              dataSet: [10, 12, 6, 8, 5]
+            }}/>
         </section>
       </main>
     </>

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import Chart from 'chart.js';
 
-const ExampleChart = () => {
+const ExampleChart = ({ chartId, options }) => {
+
+  const data = options.dataSet;
 
   useEffect(() => {
-    const ctx = document.getElementById('exampleChart').getContext('2d');
+    const ctx = document.getElementById(`${chartId}`).getContext('2d');
 
     const exampleChart = new Chart(ctx,{
       type: 'polarArea',
@@ -12,7 +14,7 @@ const ExampleChart = () => {
           labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
           datasets: [{
               label: 'days of the week',
-              data: [10, 12, 6, 5, 5],
+              data: data,
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -44,8 +46,8 @@ const ExampleChart = () => {
           },
           layout: {
             padding: {
-              top: 120,
-              right: 25,
+              top: 50,
+              right: 10,
               bottom: 10,
               left: 10
             }
@@ -64,11 +66,11 @@ const ExampleChart = () => {
   return () => {
     exampleChart.destroy();
   }
-}, []);
+}, [chartId, data]);
 
   return (
     <div className="chart">
-      <canvas id="exampleChart" width="400px" height="300px" />
+      <canvas id={chartId} width="400px" height="300px" />
     </div>
   )
 };

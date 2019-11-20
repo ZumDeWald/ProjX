@@ -23,6 +23,8 @@ header {
 
 .logo {
   width: 60px;
+  background: var(--gray3);
+  clip-path: circle(48%);
 }
 
 .header-title {
@@ -100,5 +102,5 @@ main {
   height: 350px;
   margin: 0 auto;
   background: var(--gray1);
-  border-radius: 5px;
+  box-shadow: 2px 1px 10px var(--gray3);
 }
