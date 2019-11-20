@@ -1,4 +1,6 @@
 import React from 'react';
+import ExampleChart from './ExampleChart.js';
+import ExampleChart2 from './ExampleChart2.js';
 
 import './App.css';
 import logo from './jmmLogo.png';
@@ -33,7 +35,11 @@ function App() {
         </nav>
       </header>
       <main className="main">
+        <section className="main-submenu">
+        </section>
         <section className="main-center">
+          <ExampleChart/>
+          <ExampleChart2/>
         </section>
       </main>
     </>

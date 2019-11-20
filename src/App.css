@@ -76,9 +76,29 @@ main {
   background-color: var(--gray3);
 }
 
+.main-submenu {
+  width: 95%;
+  height: 50px;
+  margin: auto;
+  background: var(--gray2);
+}
+
 .main-center {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto-fit, 300px);
   width: 95%;
   min-height: calc(100vh - 200px);
   margin: 0 auto;
   background: var(--gray2);
+}
+
+.chart {
+  position: relative;
+  width: 450px;
+  height: 350px;
+  margin: 0 auto;
+  background: var(--gray1);
+  border-radius: 5px;
 }
