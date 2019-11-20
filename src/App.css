@@ -55,6 +55,20 @@ nav {
   border-radius: 5px 5px 0 0;
 }
 
+.nav-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+.nav-list-item {
+  margin: auto 15px auto 10px;
+}
+
 main {
   width: 100vw;
   max-width: 100%;

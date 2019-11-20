@@ -24,7 +24,13 @@ function App() {
             <img src={user} alt="User Icon" className="user-icon" />
           </div>
         </section>
-        <nav></nav>
+        <nav>
+          <ul className="nav-list">
+            <li className="nav-list-item">Team View &#9663;</li>
+            <li className="nav-list-item">Monthly View &#9663;</li>
+            <li className="nav-list-item">Year To Date &#9663;</li>
+          </ul>
+        </nav>
       </header>
       <main className="main">
         <section className="main-center">
