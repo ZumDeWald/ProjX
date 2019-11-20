@@ -1,6 +1,6 @@
 import React from 'react';
 import ExampleChart from './ExampleChart.js';
-import ExampleChart2 from './ExampleChart2.js';
+import TeamData from './TeamData.js';
 
 import './App.css';
 import logo from './projX.png';
@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function App() {
+
   return (
     <>
       <header>
@@ -38,11 +39,21 @@ function App() {
         <section className="main-submenu">
         </section>
         <section className="main-center">
-          <ExampleChart chartId="1" options={{
-              dataSet: [12, 10, 9, 8, 2]
+          <ExampleChart chartId={TeamData[0].name} options={{
+              title: TeamData[0].name,
+              dataSet: TeamData[0].dataSet
             }}/>
-          <ExampleChart chartId="2" options={{
-              dataSet: [10, 12, 6, 8, 5]
+          <ExampleChart chartId={TeamData[1].name} options={{
+              title: TeamData[1].name,
+              dataSet: TeamData[1].dataSet
+            }}/>
+          <ExampleChart chartId={TeamData[2].name} options={{
+              title: TeamData[2].name,
+              dataSet: TeamData[2].dataSet
+            }}/>
+          <ExampleChart chartId={TeamData[3].name} options={{
+              title: TeamData[3].name,
+              dataSet: TeamData[3].dataSet
             }}/>
         </section>
       </main>

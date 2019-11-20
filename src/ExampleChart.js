@@ -4,6 +4,7 @@ import Chart from 'chart.js';
 const ExampleChart = ({ chartId, options }) => {
 
   const data = options.dataSet;
+  const title = options.title;
 
   useEffect(() => {
     const ctx = document.getElementById(`${chartId}`).getContext('2d');
@@ -57,16 +58,16 @@ const ExampleChart = ({ chartId, options }) => {
           },
           title: {
             display: true,
-            position: 'left',
+            position: 'top',
             fontSize: 15,
-            text: "Weekly Results"
+            text: `${title} Results`
           }
       }
   });
   return () => {
     exampleChart.destroy();
   }
-}, [chartId, data]);
+}, [chartId, data, title]);
 
   return (
     <div className="chart">
