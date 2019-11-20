@@ -2,12 +2,12 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 //import icons
-import { faGift, faCrow, faHome } from '@fortawesome/free-solid-svg-icons';
-import { faFortAwesome } from '@fortawesome/free-brands-svg-icons';
+import { faSearch, faTh, faBell, faCog } from '@fortawesome/free-solid-svg-icons';
+import { } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
-  faGift,
-  faCrow,
-  faHome,
-  faFortAwesome,
+  faSearch,
+  faTh,
+  faBell,
+  faCog
 )
