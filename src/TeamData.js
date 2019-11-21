@@ -30,7 +30,6 @@ const teamTotals = {
 }
 
 TeamData.unshift(teamTotals);
-console.log(teamTotals);
 
 
 

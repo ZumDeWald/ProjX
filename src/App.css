@@ -96,11 +96,38 @@ main {
   background: var(--gray2);
 }
 
+.horizontal-tile {
+  position: relative;
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 600px;
+  width: 800px;
+  margin: 25px auto;
+  background: var(--gray1);
+  box-shadow: 2px 1px 10px var(--gray3);
+}
+
+.tile-header {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  z-index: 3;
+}
+
+.list-button {
+  width: 150px;
+  margin: 5px auto;
+  border: 1px solid var(--steel);
+  background: var(--gray2);
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
 .chart {
   position: relative;
   width: 450px;
   height: 350px;
-  margin: 0 auto;
-  background: var(--gray1);
-  box-shadow: 2px 1px 10px var(--gray3);
+  margin: 0;
 }

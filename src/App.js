@@ -43,18 +43,6 @@ function App() {
               title: TeamData[0].name,
               dataSet: TeamData[0].dataSet
             }}/>
-          <ExampleChart chartId={TeamData[1].name} options={{
-              title: TeamData[1].name,
-              dataSet: TeamData[1].dataSet
-            }}/>
-          <ExampleChart chartId={TeamData[2].name} options={{
-              title: TeamData[2].name,
-              dataSet: TeamData[2].dataSet
-            }}/>
-          <ExampleChart chartId={TeamData[3].name} options={{
-              title: TeamData[3].name,
-              dataSet: TeamData[3].dataSet
-            }}/>
         </section>
       </main>
     </>
