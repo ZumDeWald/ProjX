@@ -78,7 +78,7 @@ const updateDataSet = (i) => {
       <h3 className="tile-header">Weekly Results</h3>
       <ul className="tile-list-buttons">
         {TeamData.map((item, i) => (
-          <li><button className="list-button" onClick={() => {updateDataSet(i)}}>{item.name}</button></li>
+          <li key={`Weekly Results ${i}`}><button className="list-button" onClick={() => {updateDataSet(i)}}>{item.name}</button></li>
         ))}
       </ul>
       <div className="chart">

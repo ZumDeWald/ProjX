@@ -1,6 +1,8 @@
 import React from 'react';
-import ExampleChart from './ExampleChart.js';
-import TeamData from './TeamData.js';
+import { Router } from '@reach/router';
+import Rep from './Rep.js';
+import Admin from './Admin.js';
+import NavLink from './NavLink.js';
 
 import './App.css';
 import logo from './projX.png';
@@ -29,21 +31,17 @@ function App() {
         </section>
         <nav>
           <ul className="nav-list">
-            <li className="nav-list-item list-item-selected">Rep</li>
-            <li className="nav-list-item">Admin</li>
+            <li className="nav-list-item">
+              <NavLink to="/"> Rep </NavLink></li>
+            <li className="nav-list-item">
+              <NavLink to="/admin"> Admin </NavLink></li>
           </ul>
         </nav>
       </header>
-      <main className="main">
-        <section className="main-submenu">
-        </section>
-        <section className="main-center">
-          <ExampleChart chartId={TeamData[0].name} options={{
-              title: TeamData[0].name,
-              dataSet: TeamData[0].dataSet
-            }}/>
-        </section>
-      </main>
+      <Router>
+        <Rep path="/" />
+        <Admin path="admin" />
+      </Router>
     </>
   );
 }

@@ -71,15 +71,6 @@ nav {
   margin: auto 15px auto 10px;
 }
 
-.list-item-selected::before {
-  content: "";
-  display:inline-block;
-  width: 8px;
-  height: 12px;
-  margin: 0 5px;
-  background: var(--steel);
-}
-
 main {
   width: 100vw;
   max-width: 100%;
