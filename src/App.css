@@ -68,6 +68,7 @@ nav {
 }
 
 .nav-list-item {
+  padding-left: 3px;
   margin: auto 15px auto 10px;
 }
 
