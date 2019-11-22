@@ -31,6 +31,11 @@ const teamTotals = {
 
 TeamData.unshift(teamTotals);
 
+const WeeklyData = {
+  totalEmails: 1298,
+  respondedEmails: 1047
+}
 
 
+export {WeeklyData};
 export default TeamData;

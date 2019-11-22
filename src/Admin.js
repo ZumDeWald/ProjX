@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 
 import ExampleChart from './ExampleChart.js';
+import ResponsesChart from './ResponsesChart.js';
 import TeamData from './TeamData.js';
 import NavLink from './NavLink.js';
 
@@ -27,6 +28,10 @@ function Admin() {
               title: TeamData[0].name,
               dataSet: TeamData[0].dataSet
             }}/>
+          <ResponsesChart path="response-totals"
+              options={{
+                title: "Response Totals"
+              }}/>
         </Router>
       </section>
     </main>
