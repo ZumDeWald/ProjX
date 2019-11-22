@@ -61,15 +61,15 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 95%;
+  width: 100%;
   height: 100%;
   padding: 0;
   margin: auto;
 }
 
 .nav-list-item {
-  padding-left: 3px;
-  margin: auto 15px auto 10px;
+  padding: 0;
+  margin: auto 15px auto 25px;
 }
 
 main {
@@ -80,10 +80,32 @@ main {
 }
 
 .main-submenu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 95%;
   height: 50px;
   margin: auto;
   background: var(--gray2);
+}
+
+.submenu-header {
+  padding: 0 10px 0 25px;
+  margin: auto;
+}
+
+.submenu-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+.submenu-item {
+  padding: 0;
+  margin: 0 10px;
 }
 
 .main-center {

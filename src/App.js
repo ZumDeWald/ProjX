@@ -32,15 +32,15 @@ function App() {
         <nav>
           <ul className="nav-list">
             <li className="nav-list-item">
-              <NavLink to="/"> Rep </NavLink></li>
+              <NavLink to="/rep/work"> Rep </NavLink></li>
             <li className="nav-list-item">
-              <NavLink to="/admin"> Admin </NavLink></li>
+              <NavLink to="/admin/weekly-results"> Admin </NavLink></li>
           </ul>
         </nav>
       </header>
       <Router>
-        <Rep path="/" />
-        <Admin path="admin" />
+        <Rep path="rep/*" />
+        <Admin path="admin/*" />
       </Router>
     </>
   );

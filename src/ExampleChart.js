@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react';
 import Chart from 'chart.js';
 import TeamData from './TeamData.js';
 
-const ExampleChart = () => {
+const ExampleChart = ({options}) => {
 
-  const [currentDataSet, setCurrentDataSet] = useState(TeamData[0]);
+  const [currentDataSet, setCurrentDataSet] = useState(options.dataSet);
 
-  const weeklyTotal = currentDataSet.dataSet.reduce((total, next) => total + next);
+  const weeklyTotal = currentDataSet.reduce((total, next) => total + next);
 
   useEffect(() => {
-    const ctx = document.getElementById("multi-chart-example").getContext('2d');
+    const ctx = document.getElementById(`${options.title}`).getContext('2d');
 
     const exampleChart = new Chart(ctx,{
       type: 'polarArea',
       data: {
           labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
           datasets: [{
-              data: currentDataSet.dataSet,
+              data: currentDataSet,
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -60,17 +60,17 @@ const ExampleChart = () => {
             display: true,
             position: 'top',
             fontSize: 15,
-            text: `${currentDataSet.name} : ${weeklyTotal}`
+            text: `${options.title} : ${weeklyTotal}`
           }
       }
   });
   return () => {
     exampleChart.destroy();
   }
-}, [currentDataSet, weeklyTotal]);
+}, [currentDataSet, weeklyTotal, options]);
 
 const updateDataSet = (i) => {
-  setCurrentDataSet(TeamData[i]);
+  setCurrentDataSet(TeamData[i].dataSet);
 }
 
   return (
@@ -82,7 +82,7 @@ const updateDataSet = (i) => {
         ))}
       </ul>
       <div className="chart">
-        <canvas id="multi-chart-example" width="400px" height="300px" />
+        <canvas id={options.title} width="400px" height="300px" />
       </div>
     </div>
   )
