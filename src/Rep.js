@@ -1,9 +1,5 @@
 import React from 'react';
-import { Router } from '@reach/router';
-
-import ExampleChart from './ExampleChart.js';
-import TeamData from './TeamData.js';
-import NavLink from './NavLink.js';
+import './rep.css';
 
 function Rep() {
 
@@ -12,21 +8,15 @@ function Rep() {
       <section className="main-submenu">
         <h4 className="submenu-header">Views</h4>
         <ul className="submenu-list">
-          <li className="submenu-item">
-            <NavLink to="/rep/work"> Work </NavLink></li>
-          <li className="submenu-item">
-            <NavLink to="/rep/forms"> Forms </NavLink></li>
-          <li className="submenu-item">
-            <NavLink to="/rep/theme"> Theme </NavLink></li>
+          <li className="submenu-item"> WorkSpace </li>
         </ul>
       </section>
       <section className="main-center">
-        <Router>
-          <ExampleChart path="work" chartId={TeamData[1].name} options={{
-              title: TeamData[1].name,
-              dataSet: TeamData[1].dataSet
-            }}/>
-        </Router>
+        <div className="rep-text-area-container">
+          <textarea rows="10" className="rep-text-area">
+            ENTER TEXT HERE
+          </textarea>
+        </div>
       </section>
     </main>
   );

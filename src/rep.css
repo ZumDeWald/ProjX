@@ -1,0 +1,11 @@
+.rep-text-area-container {
+  width: 100%;
+}
+
+.rep-text-area {
+  width: 300px;
+  max-width: 600px;
+  height: 150px;
+  max-height: 400px;
+  margin: auto;
+}

@@ -14,11 +14,11 @@ function Admin() {
         <h4 className="submenu-header">Views</h4>
         <ul className="submenu-list">
           <li className="submenu-item">
-            <NavLink to="/admin/weekly-results"> Weekly </NavLink></li>
+            <NavLink to="weekly-results"> Weekly </NavLink></li>
           <li className="submenu-item">
-            <NavLink to="/admin/response-totals"> Responses </NavLink></li>
+            <NavLink to="response-totals"> Responses </NavLink></li>
           <li className="submenu-item">
-            <NavLink to="/admin/form-responses"> Forms </NavLink></li>
+            <NavLink to="form-responses"> Forms </NavLink></li>
         </ul>
       </section>
       <section className="main-center">
