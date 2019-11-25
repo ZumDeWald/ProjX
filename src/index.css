@@ -34,3 +34,16 @@ a:focus {
   outline-color: #6B7CB5;
   outline-width: thin;
 }
+
+a:visited,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+video,
+img,
+button,
+a {
+  box-sizing: border-box;
+}
