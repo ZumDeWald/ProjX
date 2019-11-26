@@ -115,10 +115,10 @@ main {
 }
 
 .main-center {
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows: repeat(auto-fit, 400px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 95%;
   min-height: calc(100vh - 200px);
   margin: 0 auto;
@@ -159,4 +159,38 @@ main {
   width: 450px;
   height: 350px;
   margin: 0;
+}
+
+.section-header {
+  color: var(--gray1);
+  font-size: var(--variable-font);
+}
+
+.button-standard {
+  width: 150px;
+  height: 30px;
+  margin: auto 10px auto 0;
+  background: var(--gray2);
+  border: 1px solid var(--steel);
+  color: var(--onyx);
+  font-family: var(--main-font);
+  font-size: var(--variable-font);
+  cursor: pointer;
+}
+.button-float {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  height: 25px;
+  background: var(--steel);
+  color: var(--gray1);
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: var(--main-font);
+  font-size: var(--font-small);
+}
+
+.button-float:hover {
+  background: var(--highlight);
+  color: var(--onyx);
 }

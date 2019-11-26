@@ -6,8 +6,14 @@ function Rep() {
 
   const [currentEmail, setCurrentEmail] = useState(SampleEmailQuestions.first);
 
-  const appendTextArea = (insertText) => {
-    document.getElementById("response-textarea").value += `${insertText}`;
+  const [formStagingAreaText, setFormStagingAreaText] = useState("")
+
+  const appendTextArea = (area, insertText) => {
+    document.getElementById(`${area}`).value += `${insertText}`;
+  }
+
+  const handleInputChange = (e) => {
+    setFormStagingAreaText(e.target.value);
   }
 
   return (
@@ -20,14 +26,26 @@ function Rep() {
       </section>
       <section className="main-center">
         <div className="rep-text-area-container">
-          <textarea id="response-textarea" rows="10" className="rep-text-area">
+          <h2 className="section-header">Response Area</h2>
+          <textarea id="response-textarea" rows="10" className="rep-textarea">
             {`${currentEmail}
 
             `}
           </textarea>
+          <button className="button-float shrink">=> Send it off</button>
+        </div>
+
+        <div className="rep-text-area-container">
+          <h2 className="section-header margin-top-10">Customize Form Responses</h2>
+          <div className="rep-control-panel">
             {FormResponses.map((item, i) => (
-              <button value={item.title} key={`form ${i}`} onClick={() => {appendTextArea(FormResponses[i].response)}}>{item.title}</button>
+              <button value={item.title} key={`form ${i}`} onClick={() => {setFormStagingAreaText(item.response)}} className="button-standard tab">
+                {item.title} &or;</button>
             ))}
+          </div>
+          <textarea id="form-preview" rows="10" className="rep-textarea" value={formStagingAreaText} onChange={handleInputChange} />
+          <button className="button-float shrink" onClick={() => {setFormStagingAreaText("")}}>&#10005; Clear Form Area</button>
+          <button className="button-float shrink" onClick={() => {appendTextArea("response-textarea", formStagingAreaText)}}>&#9650; Move To Response</button>
         </div>
       </section>
     </main>

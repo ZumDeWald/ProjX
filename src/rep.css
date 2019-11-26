@@ -1,18 +1,48 @@
 .rep-text-area-container {
+  position: relative;
   width: 90%;
   max-width: 710px;
-  height: 450px;
   margin: 50px auto;
   background: var(--onyx);
   border-radius: 5px;
   padding: 10px;
 }
 
-.rep-text-area {
+.rep-textarea {
   resize: none;
-  width: 99%;
+  width: 97%;
   min-height: 350px;
+  padding: 10px;
   border-radius: 5px;
   font-size: var(--variable-font);
   overflow-y: scroll;
+}
+
+.rep-control-panel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 99%;
+  height: 50px;
+  margin: auto;
+}
+
+.button-standard.tab {
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.button-float.shrink {
+  width: 40px;
+  overflow: hidden;
+  transition-duration: 300ms;
+}
+
+.button-float.shrink:hover {
+  width: 200px;
+}
+
+.rep-text-area-container > .button-float.shrink:nth-of-type(2) {
+  bottom: 60px;
 }

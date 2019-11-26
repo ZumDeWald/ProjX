@@ -1,10 +1,10 @@
 const FormResponses = [
   {
-    title: "Prayer Reponse",
+    title: "Prayer",
     response: "Thank you for reaching out to Joyce Meyer Ministries! We are more than happy to pray for you in this time of need."
   },
   {
-    title: "Information Response",
+    title: "Information",
     response: "Thank you for your inquiry. You can find out more information on your request at https://joycemeyer.org."
   },
 ];
