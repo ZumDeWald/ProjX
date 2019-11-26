@@ -1,21 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chart from 'chart.js';
+import TeamData from './TeamData.js';
 
-const ExampleChart = ({ chartId, options }) => {
+const ExampleChart = ({options}) => {
 
-  const data = options.dataSet;
-  const title = options.title;
+  const [currentDataSet, setCurrentDataSet] = useState(options.dataSet);
+
+  const weeklyTotal = currentDataSet.reduce((total, next) => total + next);
 
   useEffect(() => {
-    const ctx = document.getElementById(`${chartId}`).getContext('2d');
+    const ctx = document.getElementById(`${options.title}`).getContext('2d');
 
     const exampleChart = new Chart(ctx,{
       type: 'polarArea',
       data: {
           labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
           datasets: [{
-              label: 'days of the week',
-              data: data,
+              data: currentDataSet,
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -37,7 +38,6 @@ const ExampleChart = ({ chartId, options }) => {
           scales: {
               yAxes: [{
                   ticks: {
-                      beginAtZero: true,
                       display: false
                   },
                   gridLines: {
@@ -47,31 +47,43 @@ const ExampleChart = ({ chartId, options }) => {
           },
           layout: {
             padding: {
-              top: 50,
+              top: 10,
               right: 10,
               bottom: 10,
               left: 10
             }
           },
           legend: {
-            position: 'left'
+            position: 'bottom'
           },
           title: {
             display: true,
             position: 'top',
             fontSize: 15,
-            text: `${title} Results`
+            text: `${options.title} : ${weeklyTotal}`
           }
       }
   });
   return () => {
     exampleChart.destroy();
   }
-}, [chartId, data, title]);
+}, [currentDataSet, weeklyTotal, options]);
+
+const updateDataSet = (i) => {
+  setCurrentDataSet(TeamData[i].dataSet);
+}
 
   return (
-    <div className="chart">
-      <canvas id={chartId} width="400px" height="300px" />
+    <div className="horizontal-tile">
+      <h3 className="tile-header">Weekly Results</h3>
+      <ul className="tile-list-buttons">
+        {TeamData.map((item, i) => (
+          <li key={`Weekly Results ${i}`}><button className="list-button" onClick={() => {updateDataSet(i)}}>{item.name}</button></li>
+        ))}
+      </ul>
+      <div className="chart">
+        <canvas id={options.title} width="400px" height="300px" />
+      </div>
     </div>
   )
 };

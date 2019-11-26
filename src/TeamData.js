@@ -1,9 +1,5 @@
 const TeamData = [
   {
-    name: "Team",
-    dataSet: [18, 22, 14, 24, 18]
-  },
-  {
     name: "Carl",
     dataSet: [10, 12, 6, 8, 0]
   },
@@ -13,14 +9,33 @@ const TeamData = [
   },
   {
     name: "Jo",
-    dataSet: [0, 6, 8, 6, 10]
+    dataSet: [0, 6, 8, 6, 12]
   },
 ];
 
-// const reducer = (accumulator, currentValue) => accumulator.dataSet + currentValue.dataSet;
-//
-// const teamTotals = TeamData.reduce(reducer);
-//
-// TeamData.unshift(teamTotals);
+const teamDataSet = [0, 0, 0, 0, 0];
 
+TeamData.map(teamMember => {
+  teamDataSet[0] += teamMember.dataSet[0];
+  teamDataSet[1] += teamMember.dataSet[1];
+  teamDataSet[2] += teamMember.dataSet[2];
+  teamDataSet[3] += teamMember.dataSet[3];
+  teamDataSet[4] += teamMember.dataSet[4];
+  return teamDataSet;
+});
+
+const teamTotals = {
+  name: "Team",
+  dataSet: teamDataSet
+}
+
+TeamData.unshift(teamTotals);
+
+const WeeklyData = {
+  totalEmails: 1298,
+  respondedEmails: 1047
+}
+
+
+export {WeeklyData};
 export default TeamData;
