@@ -1,11 +1,18 @@
 .rep-text-area-container {
-  width: 100%;
+  width: 90%;
+  max-width: 710px;
+  height: 450px;
+  margin: 50px auto;
+  background: var(--onyx);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .rep-text-area {
-  width: 300px;
-  max-width: 600px;
-  height: 150px;
-  max-height: 400px;
-  margin: auto;
+  resize: none;
+  width: 99%;
+  min-height: 350px;
+  border-radius: 5px;
+  font-size: var(--variable-font);
+  overflow-y: scroll;
 }
