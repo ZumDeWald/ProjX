@@ -1,6 +1,8 @@
 import React from 'react';
-import ExampleChart from './ExampleChart.js';
-import TeamData from './TeamData.js';
+import { Router } from '@reach/router';
+import Rep from './Rep.js';
+import Admin from './Admin.js';
+import NavLink from './NavLink.js';
 
 import './App.css';
 import logo from './projX.png';
@@ -29,34 +31,17 @@ function App() {
         </section>
         <nav>
           <ul className="nav-list">
-            <li className="nav-list-item">Team View &#9663;</li>
-            <li className="nav-list-item">Monthly View &#9663;</li>
-            <li className="nav-list-item">Year To Date &#9663;</li>
+            <li className="nav-list-item">
+              <NavLink to="/rep/work"> Rep </NavLink></li>
+            <li className="nav-list-item">
+              <NavLink to="/admin/weekly-results"> Admin </NavLink></li>
           </ul>
         </nav>
       </header>
-      <main className="main">
-        <section className="main-submenu">
-        </section>
-        <section className="main-center">
-          <ExampleChart chartId={TeamData[0].name} options={{
-              title: TeamData[0].name,
-              dataSet: TeamData[0].dataSet
-            }}/>
-          <ExampleChart chartId={TeamData[1].name} options={{
-              title: TeamData[1].name,
-              dataSet: TeamData[1].dataSet
-            }}/>
-          <ExampleChart chartId={TeamData[2].name} options={{
-              title: TeamData[2].name,
-              dataSet: TeamData[2].dataSet
-            }}/>
-          <ExampleChart chartId={TeamData[3].name} options={{
-              title: TeamData[3].name,
-              dataSet: TeamData[3].dataSet
-            }}/>
-        </section>
-      </main>
+      <Router>
+        <Rep path="rep/*" />
+        <Admin path="admin/*" />
+      </Router>
     </>
   );
 }

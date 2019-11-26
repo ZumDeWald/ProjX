@@ -61,14 +61,15 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 95%;
+  width: 100%;
   height: 100%;
   padding: 0;
   margin: auto;
 }
 
 .nav-list-item {
-  margin: auto 15px auto 10px;
+  padding: 0;
+  margin: auto 15px auto 25px;
 }
 
 main {
@@ -79,10 +80,32 @@ main {
 }
 
 .main-submenu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 95%;
   height: 50px;
   margin: auto;
   background: var(--gray2);
+}
+
+.submenu-header {
+  padding: 0 10px 0 25px;
+  margin: auto;
+}
+
+.submenu-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+.submenu-item {
+  padding: 0;
+  margin: 0 10px;
 }
 
 .main-center {
@@ -96,11 +119,38 @@ main {
   background: var(--gray2);
 }
 
+.horizontal-tile {
+  position: relative;
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 600px;
+  width: 800px;
+  margin: 25px auto;
+  background: var(--gray1);
+  box-shadow: 2px 1px 10px var(--gray3);
+}
+
+.tile-header {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  z-index: 3;
+}
+
+.list-button {
+  width: 150px;
+  margin: 5px auto;
+  border: 1px solid var(--steel);
+  background: var(--gray2);
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
 .chart {
   position: relative;
   width: 450px;
   height: 350px;
-  margin: 0 auto;
-  background: var(--gray1);
-  box-shadow: 2px 1px 10px var(--gray3);
+  margin: 0;
 }
