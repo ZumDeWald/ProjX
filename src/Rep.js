@@ -12,6 +12,10 @@ function Rep() {
     document.getElementById(`${area}`).value += `${insertText}`;
   }
 
+  const clearTextArea = (area) => {
+    document.getElementById(`${area}`).value = "";
+  }
+
   const handleInputChange = (e) => {
     setFormStagingAreaText(e.target.value);
   }
@@ -30,8 +34,13 @@ function Rep() {
           <textarea id="response-textarea" rows="10" className="rep-textarea">
             {`${currentEmail}
 
-            `}
+`}
           </textarea>
+          <button className="button-float shrink" onClick={() => {
+              clearTextArea("response-textarea");
+              appendTextArea("response-textarea", `${currentEmail}
+
+  `)}}>&#10005; Reset Response</button>
           <button className="button-float shrink">=> Send it off</button>
         </div>
 
@@ -39,8 +48,7 @@ function Rep() {
           <h2 className="section-header margin-top-10">Customize Form Responses</h2>
           <div className="rep-control-panel">
             {FormResponses.map((item, i) => (
-              <button value={item.title} key={`form ${i}`} onClick={() => {setFormStagingAreaText(item.response)}} className="button-standard tab">
-                {item.title} &or;</button>
+              <button value={item.title} key={`form ${i}`} onClick={() => {setFormStagingAreaText(prevText => prevText + item.response)}} className="button-standard tab">{item.title} &or;</button>
             ))}
           </div>
           <textarea id="form-preview" rows="10" className="rep-textarea" value={formStagingAreaText} onChange={handleInputChange} />
