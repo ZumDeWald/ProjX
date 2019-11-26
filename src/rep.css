@@ -46,3 +46,9 @@
 .rep-text-area-container > .button-float.shrink:nth-of-type(2) {
   bottom: 60px;
 }
+
+.character-count {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+}

@@ -6,7 +6,11 @@ function Rep() {
 
   const [currentEmail, setCurrentEmail] = useState(SampleEmailQuestions.first);
 
-  const [formStagingAreaText, setFormStagingAreaText] = useState("")
+  const [resonseStagingAreaText, setresponseStagingAreaText] = useState(`${currentEmail}
+
+`);
+
+  const [formStagingAreaText, setFormStagingAreaText] = useState("");
 
   const appendTextArea = (area, insertText) => {
     document.getElementById(`${area}`).value += `${insertText}`;
@@ -16,7 +20,11 @@ function Rep() {
     document.getElementById(`${area}`).value = "";
   }
 
-  const handleInputChange = (e) => {
+  const handleResponseInputChange = (e) => {
+    setresponseStagingAreaText(e.target.value);
+  }
+
+  const handleFormInputChange = (e) => {
     setFormStagingAreaText(e.target.value);
   }
 
@@ -28,19 +36,15 @@ function Rep() {
           <li className="submenu-item"> WorkSpace </li>
         </ul>
       </section>
+
       <section className="main-center">
         <div className="rep-text-area-container">
           <h2 className="section-header">Response Area</h2>
-          <textarea id="response-textarea" rows="10" className="rep-textarea">
-            {`${currentEmail}
+          <textarea id="response-textarea" rows="10" className="rep-textarea" value={resonseStagingAreaText} onChange={handleResponseInputChange} />
+          <div className="character-count">Character Count: {resonseStagingAreaText.length}</div>
+          <button className="button-float shrink" onClick={() => {setresponseStagingAreaText(`${currentEmail}
 
-`}
-          </textarea>
-          <button className="button-float shrink" onClick={() => {
-              clearTextArea("response-textarea");
-              appendTextArea("response-textarea", `${currentEmail}
-
-  `)}}>&#10005; Reset Response</button>
+`)}}>&#10005; Reset Response</button>
           <button className="button-float shrink">=> Send it off</button>
         </div>
 
@@ -51,9 +55,9 @@ function Rep() {
               <button value={item.title} key={`form ${i}`} onClick={() => {setFormStagingAreaText(prevText => prevText + item.response)}} className="button-standard tab">{item.title} &or;</button>
             ))}
           </div>
-          <textarea id="form-preview" rows="10" className="rep-textarea" value={formStagingAreaText} onChange={handleInputChange} />
+          <textarea id="form-preview" rows="10" className="rep-textarea" value={formStagingAreaText} onChange={handleFormInputChange} />
           <button className="button-float shrink" onClick={() => {setFormStagingAreaText("")}}>&#10005; Clear Form Area</button>
-          <button className="button-float shrink" onClick={() => {appendTextArea("response-textarea", formStagingAreaText)}}>&#9650; Move To Response</button>
+          <button className="button-float shrink" onClick={() => {setresponseStagingAreaText(prevText => prevText + formStagingAreaText)}}>&#9650; Move To Response</button>
         </div>
       </section>
     </main>
