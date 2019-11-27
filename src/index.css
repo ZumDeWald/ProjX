@@ -11,7 +11,7 @@
   --font-small: 1rem;
   --font-med: 1.3rem;
   --font-large: 1.5rem;
-  --variable-font: --font-med;
+  --variable-font: var(--font-med);
   --main-font: 'Lato', sans-serif;
 }
 

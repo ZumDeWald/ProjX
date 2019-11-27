@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './a11yBar.css';
 
 const A11yBar = () => {
+
+  const [fontSize, setFontSize] = useState("standard");
+
+  const root = document.documentElement;
+
+  const changeSize = () => {
+    if (fontSize === "standard") {
+      setFontSize("large");
+      root.style.setProperty("--variable-font", "var(--font-large)");
+      console.log(fontSize);
+    } else if (fontSize === "large") {
+      setFontSize("standard");
+      root.style.setProperty("--variable-font", "var(--font-med)");
+      console.log(fontSize);
+    }
+  }
 
   const a11yContainer = document.getElementsByClassName("a-bar-outer-container");
 
@@ -40,7 +56,7 @@ const A11yBar = () => {
         <div className="a11y-option-container grid-position-2">
           <h5 className="a11y-option-title">Font Size</h5>
           <div className="option-slider-container">
-            <div className="option-slider-button" onClick={buttonSlide}></div>
+            <div className="option-slider-button" onClick={(e) => {buttonSlide(e); changeSize()}}></div>
           </div>
         </div>
       </section>
