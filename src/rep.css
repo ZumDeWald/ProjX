@@ -3,7 +3,7 @@
   width: 90%;
   max-width: 710px;
   margin: 25px auto;
-  background: var(--onyx);
+  background: var(--foreground);
   border-radius: 5px;
   padding: 10px;
 }
