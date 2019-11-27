@@ -1,0 +1,30 @@
+.a-bar-container {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: grid;
+  grid-template-columns: [ac1] 225px [ac2] 75px [ac3];
+  grid-template-rows: [ar1] 1fr [ar2] 1fr [ar3] 1fr [ar4] 1fr [ar5];
+  grid-gap: 5px;
+  width: 300px;
+  height: 300px;
+  background: var(--onyx);
+  border-radius: 25px;
+  z-index: 5;
+}
+
+.a11y-bar-header {
+  grid-column: ac1 / ac2;
+  grid-row: ar1 / ar2;
+  margin: auto;
+  font-size: 1.5rem;
+  color: var(--gray1);
+}
+
+.a11y-icon {
+  grid-column: ac2 / ac3;
+  grid-row: ar1 / ar2;
+  margin: auto;
+  font-size: 3rem;
+  color: var(--gray1);
+}

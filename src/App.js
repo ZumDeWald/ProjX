@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Router, Link } from '@reach/router';
 import Rep from './Rep.js';
 import Admin from './Admin.js';
+import A11yBar from './A11yBar.js';
 
 import './App.css';
 import logo from './projX.png';
@@ -10,7 +11,7 @@ import user from './user.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-function App() {
+const App = () => {
 
   const [currentView, setCurrentView] = useState("Rep");
 
@@ -39,6 +40,7 @@ function App() {
           </ul>
         </nav>
       </header>
+      <A11yBar />
       <Router>
         <Rep path="rep/*" />
         <Admin path="admin/*" />
