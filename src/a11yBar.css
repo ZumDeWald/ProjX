@@ -3,11 +3,11 @@
   right: 50px;
   bottom: 50px;
   display: grid;
-  grid-template-columns: [ac1] 225px [ac2] 75px [ac3];
+  grid-template-columns: [ac1] 3fr [ac2] 1fr [ac3];
   grid-template-rows: [ar1] 1fr [ar2] 1fr [ar3] 1fr [ar4] 1fr [ar5];
-  grid-gap: 5px;
+  grid-gap: 0;
   width: 300px;
-  height: 300px;
+  height: 200px;
   background: var(--onyx);
   border-radius: 25px;
   z-index: 5;
@@ -25,6 +25,64 @@
   grid-column: ac2 / ac3;
   grid-row: ar1 / ar2;
   margin: auto;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--gray1);
+}
+
+.a11y-option-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 275px;
+  margin: auto;
+  background: var(--steel);
+  border-radius: 25px;
+}
+
+.a11y-option-title {
+  padding: 10px;
+  margin: 0;
+  font-size: 1rem;
+  color: var(--gray1);
+}
+
+.grid-position-1 {
+  grid-column: ac1 / ac3;
+  grid-row: ar2 / ar3;
+}
+
+.grid-position-2 {
+  grid-column: ac1 / ac3;
+  grid-row: ar3 / ar4;
+}
+
+.grid-position-3 {
+  grid-column: ac1 / ac3;
+  grid-row: ar4 / ar5;
+}
+
+.option-slider-container {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+  margin: 5px;
+  background: var(--orange);
+  border: 2px solid var(--gray2);
+  border-radius: 25px;
+}
+
+.option-slider-button {
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0 1px;
+  background: var(--gray2);
+  border: 2px solid var(--steel);
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.slide-right {
+  transform: translate3d(24px, 0, 0);
 }
