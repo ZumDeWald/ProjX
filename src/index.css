@@ -6,6 +6,17 @@
   --gray1: #f9f9fc;
   --gray2: #f3f3ff;
   --gray3: #e1e1ef;
+  --highlight: #40c0cb;
+  --orange: #FF8910;
+  --theme-light: var(--gray1);
+  --theme-dark: var(--onyx);
+  --background: var(--theme-light);
+  --foreground: var(--theme-dark);
+  --font-small: 1rem;
+  --font-med: 1.3rem;
+  --font-large: 1.5rem;
+  --variable-font: var(--font-med);
+  --main-font: 'Lato', sans-serif;
 }
 
 
@@ -33,4 +44,21 @@ textarea:focus,
 a:focus {
   outline-color: #6B7CB5;
   outline-width: thin;
+}
+
+a:visited,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+video,
+img,
+button,
+a {
+  box-sizing: border-box;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
 }

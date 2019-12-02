@@ -1,8 +1,8 @@
-import React from 'react';
-import { Router } from '@reach/router';
+import React, { useState } from 'react';
+import { Router, Link } from '@reach/router';
 import Rep from './Rep.js';
 import Admin from './Admin.js';
-import NavLink from './NavLink.js';
+import A11yBar from './A11yBar.js';
 
 import './App.css';
 import logo from './projX.png';
@@ -11,7 +11,9 @@ import user from './user.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-function App() {
+const App = () => {
+
+  const [currentView, setCurrentView] = useState("Rep");
 
   return (
     <>
@@ -31,13 +33,14 @@ function App() {
         </section>
         <nav>
           <ul className="nav-list">
-            <li className="nav-list-item">
-              <NavLink to="/rep/work"> Rep </NavLink></li>
-            <li className="nav-list-item">
-              <NavLink to="/admin/weekly-results"> Admin </NavLink></li>
+            <li className={currentView === "Rep" ? "nav-list-item selected-view" : "nav-list-item"} onClick={() => {setCurrentView("Rep")}}>
+              <Link to="/rep/work"> Rep </Link></li>
+            <li className={currentView === "Admin" ? "nav-list-item selected-view" : "nav-list-item"} onClick={() => {setCurrentView("Admin")}}>
+              <Link to="/admin/weekly-results"> Admin </Link></li>
           </ul>
         </nav>
       </header>
+      <A11yBar />
       <Router>
         <Rep path="rep/*" />
         <Admin path="admin/*" />
